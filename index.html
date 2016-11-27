@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap-flex.min.css">
+    <link rel="stylesheet/less" type="text/css" href="./style.less">
+    <!-- Ref: https://cdnjs.com/libraries/less.js/ -->
+    <script src="./lib/less.js"></script>
+</head>
+<body>
+<!-- CONTAINER -->
+
+<div class="container container--grey">
+    Loading
+</div>
+
+<!-- SCRIPTS -->
+
+<!-- Docs: https://github.com/babel/babel-standalone -->
+<script src="./lib/babel.min.js"></script>
+<!-- Docs: https://facebook.github.io/react/docs/installation.html#using-a-cdn -->
+<script src="./lib/react.js"></script>
+<script src="./lib/react-dom.js"></script>
+
+<!-- Doc: https://github.com/mikach/requirejs-babel -->
+<script src="lib/requirejs.min.js"></script>
+<script>
+    requirejs.config({
+        config: {
+            es6: {
+            resolveModuleSource: function(source) {
+                return 'es6!'+source;
+            }
+            }
+        },
+        paths: {
+            es6: './lib/es6',
+            babel: './lib/babel-5.8.34.min'
+        }
+    });
+</script>
+
+<!-- Money Maker! -->
+<script src="index.js"></script>
+
+<!-- Uncomment out if using Browser-Sync --> 
+<script id="__bs_script__">//<![CDATA[                                                                            
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.2'><\/script>".replace("HOST", location.hostname));                                                                              
+//]]></script>
+
+</body>
+</html>
