@@ -41,7 +41,6 @@ class Form extends React.Component {
                         <a href="#" className="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
                     </div>
                 </div>
-                <hr/>
             </div>
         );
     }
