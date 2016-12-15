@@ -24,7 +24,7 @@ ie. https://{your-username}.github.io/react-fiddle-heavy/
 
 BrowserSync
 ```
-browser-sync start -s -f './'
+browser-sync start -s -f '*'
 ```
 
 Python

@@ -2,6 +2,8 @@ class Form extends React.Component {
     render() {
         return (
             <div>
+                <h4>Example Bootstrap 4 Form</h4>
+                <hr/>
                 <div className="input-group">
                     <span className="input-group-addon" id="basic-addon1">@</span>
                     <input type="text" className="form-control" placeholder="Username" aria-describedby="basic-addon1" />
