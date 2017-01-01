@@ -13,6 +13,10 @@ class App extends React.Component {
         console.log('Clicked');
     }
 
+    onNavigate() {
+        console.log('Navigate');        
+    }
+
     render() {
         const { data } = this.state;
 
@@ -25,6 +29,7 @@ class App extends React.Component {
                 <div className="grid grid--gap-mid">
                     <button className="btn btn-primary grid-cell" onClick={this.onClick}>Add</button>
                     <button className="btn btn-secondary grid-cell">Remove</button>
+                    <button className="btn btn-secondary grid-cell" onClick={this.onNavigate}>Navigate</button>
                 </div>
             </div>
         );
